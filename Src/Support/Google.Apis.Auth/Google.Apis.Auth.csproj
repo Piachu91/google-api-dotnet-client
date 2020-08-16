@@ -27,8 +27,6 @@ Supported Platforms:
   <ItemGroup>
     <ProjectReference Include="..\Google.Apis.Core\Google.Apis.Core.csproj" />
     <ProjectReference Include="..\Google.Apis\Google.Apis.csproj" />
-
-    <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.1" PrivateAssets="All" />
     <PackageReference Include="SourceLink.Create.CommandLine" Version="2.8.0" PrivateAssets="All" />
   </ItemGroup>
 
