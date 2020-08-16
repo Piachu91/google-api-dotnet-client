@@ -145,10 +145,10 @@ namespace Google.Apis.Auth.OAuth2
             ICodeReceiver codeReceiver = null)
         {
             initializer.Scopes = scopes;
-            initializer.DataStore = dataStore ?? new FileDataStore(Folder);
+            initializer.DataStore = dataStore ?? new PasswordVaultDataStore();
 
             var flow = new GoogleAuthorizationCodeFlow(initializer);
-            codeReceiver = codeReceiver ?? new LocalServerCodeReceiver();
+            codeReceiver = codeReceiver ?? new UwpCodeReceiver();
 
             // Create an authorization code installed app instance and authorize the user.
             return await new AuthorizationCodeInstalledApp(flow, codeReceiver).AuthorizeAsync
